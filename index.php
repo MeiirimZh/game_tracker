@@ -11,5 +11,7 @@
     <?php
         require_once "blocks/header.html";
     ?>
+
+    <script src="js/redirect.js"></script>
 </body>
 </html>

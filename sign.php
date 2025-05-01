@@ -13,30 +13,31 @@
         require_once "blocks/header.html";
     ?>
     <main>
-        <form name="sign-up" action="" method="POST" class="sign-up-form" onsubmit="return validateForm()">
+        <form name="sign-up" action="php/add_user.php" method="POST" class="sign-up-form" onsubmit="return validateForm()">
             <h2 class="form-title">Регистрация</h2>
             <h3 class="form-error"></h3>
             <h3>Имя пользователя</h3>
-            <input type="text" name="username">
+            <input type="text" name="username" placeholder="Введите...">
             <h3>Почта</h3>
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="Введите...">
             <h3>Пароль</h3>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Введите...">
             <h3>Повторите пароль</h3>
-            <input type="password" name="repeat_password">
+            <input type="password" name="repeat_password" placeholder="Введите...">
             <input type="submit" value="Подтвердить">
         </form>
         <form action="" method="POST" class="sign-in-form">
             <h2 class="form-title">Вход</h2>
             <h3>Почта</h3>
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="Введите...">
             <h3>Пароль</h3>
-            <input class="sigin-in-form__submit" type="password" name="password">
+            <input class="sigin-in-form__submit" type="password" name="password" placeholder="Введите...">
             <input type="submit" value="Подтвердить">
         </form>
         <button class="changeFormBtn" onclick="changeForm()">Зарегистрироваться</button>
     </main>
 
+    <script src="js/redirect.js"></script>
     <script src="js/form.js"></script>
 </body>
 </html>
