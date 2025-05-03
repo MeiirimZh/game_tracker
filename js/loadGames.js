@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+    function deleteGame(index, cards) {
+        fetch('php/delete_game.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                game_name: cards[index].querySelector(".card-name").textContent
+            })
+        })
+
+        location.reload();
+    }
+
     fetch('php/load_games.php')
         .then(response => response.json())
         .then(data => {
@@ -9,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
             cards.forEach((element, index) => {
                 element.querySelector(".card-name").textContent = data[index]['game_name'];
                 element.querySelector(".card-genre").textContent = data[index]['genre_name'];
+                element.querySelector(".card-delete").addEventListener("click", () => {
+                    deleteGame(index, cards);
+                });
 
                 switch (data[index]['genre_name']) {
                     case 'Экшен':
@@ -34,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 stars = element.querySelectorAll(".star");
-
                 stars.forEach((s_element, s_index) => {
                     if (s_index < data[index]['rating']) {
                         s_element.src = "icons/star.svg";

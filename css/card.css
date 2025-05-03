@@ -62,3 +62,18 @@
     justify-content: center;
     gap: 5px;
 }
+
+.card-delete {
+    font-family: 'RussoOne';
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.card-delete:hover {
+    font-size: 16px;
+}
