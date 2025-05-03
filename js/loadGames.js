@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 game_name: cards[index].querySelector(".card-name").textContent
             })
         })
-
-        location.reload();
+        .then(() => {
+            location.reload();
+        })
     }
 
     fetch('php/load_games.php')
@@ -29,20 +30,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 switch (data[index]['genre_name']) {
                     case 'Экшен':
-                        element.querySelector(".card-icon__marker").style.background = "#f03b1f";
+                        element.querySelector(".card-icon__marker").style.background = "#C0392B";
                         element.querySelector(".card-icon__img").src = "icons/genre_icons/action.svg";
                         break;
                     case 'Платформер':
-                        element.querySelector(".card-icon__marker").style.background = "#26d1d4";
+                        element.querySelector(".card-icon__marker").style.background = "#F1C40F";
                         element.querySelector(".card-icon__img").src = "icons/genre_icons/platformer.svg";
                         break;
                     case 'Аркада':
-                        element.querySelector(".card-icon__marker").style.background = "#a84ac2";
+                        element.querySelector(".card-icon__marker").style.background = "#E67E22";
                         element.querySelector(".card-icon__img").src = "icons/genre_icons/arcade.svg";
                         break;
                     case 'Rogue-like':
-                        element.querySelector(".card-icon__marker").style.background = "#e0cb43";
+                        element.querySelector(".card-icon__marker").style.background = "#8E44AD";
                         element.querySelector(".card-icon__img").src = "icons/genre_icons/roguelike.svg";
+                        break;
+                    case 'RPG':
+                        element.querySelector(".card-icon__marker").style.background = "#2980B9";
+                        element.querySelector(".card-icon__img").src = "icons/genre_icons/rpg.svg";
+                        break;
+                    case 'Стратегия':
+                        element.querySelector(".card-icon__marker").style.background = "#27AE60";
+                        element.querySelector(".card-icon__img").src = "icons/genre_icons/strategy.svg";
+                        break;
+                    case 'Драки':
+                        element.querySelector(".card-icon__marker").style.background = "#922B21";
+                        element.querySelector(".card-icon__img").src = "icons/genre_icons/fighting.svg";
+                        break;
+                    case 'Ужасы':
+                        element.querySelector(".card-icon__marker").style.background = "#2C3E50";
+                        element.querySelector(".card-icon__img").src = "icons/genre_icons/horror.svg";
+                        break;
+                    case 'Головоломки':
+                        element.querySelector(".card-icon__marker").style.background = "#16A085";
+                        element.querySelector(".card-icon__img").src = "icons/genre_icons/puzzle.svg";
                         break;
                     default:
                         element.querySelector(".card-icon__marker").style.background = '#fff';
