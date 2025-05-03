@@ -48,7 +48,7 @@ input:not([type="submit"]) {
     font-family: 'Jura';
 }
 
-input[name="repeat_password"] {
+input[name="repeat_password"], input[name="rating"] {
     margin-bottom: 40px;
 }
 
@@ -70,6 +70,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #3648f5;
     transition: .2s;
+}
+
+select {
+    width: 200px;
+    height: 25px;
 }
 
 .sigin-in-form__submit {

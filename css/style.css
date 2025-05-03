@@ -1,3 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'RussoOne';
+    src: url("../fonts/RussoOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url("../fonts/Jura-VariableFont_wght.ttf");
+}
+
 body {
     background: #0d102f;
     margin: 0;
@@ -9,4 +23,18 @@ h1 {
 
 main {
     width: 100%;
+}
+
+.main__username {
+    font-family: 'RussoOne';
+    color: #fff;
+    text-align: center;
+}
+
+.games {
+    width: 1118px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 0 auto;
 }

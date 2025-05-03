@@ -1,0 +1,8 @@
+Создание таблицы игр
+CREATE TABLE game (
+	game_id INT AUTO_INCREMENT PRIMARY KEY,
+    name TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    rating DECIMAL NOT NULL,
+    user_id INT REFERENCES users(user_id)
+)

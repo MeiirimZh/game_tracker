@@ -49,3 +49,9 @@ header ul li a {
     text-decoration: none;
     color: white;
 }
+
+@media (min-width: 1300px) {
+    header h1 {
+        margin-right: 600px;
+    }
+}

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'RussoOne';
+    src: url("../fonts/RussoOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url("../fonts/Jura-VariableFont_wght.ttf");
+}
+
+.card {
+    position: relative;
+
+    font-family: 'Jura';
+    width: 300px;
+    height: 400px;
+    background: rgba(38, 50, 137, 0.5);
+
+    border-radius: 10px;
+}
+
+.card-icon__marker {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    left: 250px;
+    top: 25px;
+    background: green;
+    border-radius: 5px 0 0 5px;
+}
