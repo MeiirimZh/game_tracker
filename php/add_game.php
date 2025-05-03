@@ -18,7 +18,7 @@
     $user_id = intval($result->fetch_assoc()['user_id']);
 
     $stmt = $conn->prepare('INSERT INTO games (game_name, genre_id, rating, user_id) VALUES (?, ?, ?, ?)');
-    $stmt->bind_param('sidi', $game_name, $genre_id, $rating, $user_id);
+    $stmt->bind_param('siii', $game_name, $genre_id, $rating, $user_id);
     $stmt->execute();
 
     header("Location: ../index.php");

@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             const cards = document.querySelectorAll(".card");
+            
+            let stars;
 
             cards.forEach((element, index) => {
                 element.querySelector(".card-name").textContent = data[index]['game_name'];
@@ -30,6 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         element.querySelector(".card-icon__img").src = "icons/genre_icons/game.svg";
                         break;
                 }
+
+                stars = element.querySelectorAll(".star");
+
+                stars.forEach((s_element, s_index) => {
+                    if (s_index < data[index]['rating']) {
+                        s_element.src = "icons/star.svg";
+                    }
+                })
             })
         })
 })

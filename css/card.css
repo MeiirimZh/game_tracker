@@ -38,6 +38,10 @@
     border-radius: 5px 0 0 5px;
 }
 
+.card-text {
+    margin-bottom: 38px;
+}
+
 .card-name, .card-genre {
     color: #fff;
     margin: 0;
@@ -51,4 +55,10 @@
 .card-genre {
     font-size: 16px;
     text-align: center;
+}
+
+.card-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
