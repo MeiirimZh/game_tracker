@@ -31,3 +31,17 @@ function changeForm() {
         currentForm = "sign-up";
     }
 }
+
+function updateStars(star_index) {
+    const stars = document.querySelectorAll(".form-stars__icon");
+
+    stars.forEach(element => {
+        element.src = "icons/star.svg";
+    })
+
+    stars.forEach((element, index) => {
+        if (index <= star_index) {
+            element.src = "icons/yellow_star.svg";
+        }
+    })
+}

@@ -1,7 +1,7 @@
 <?php
     $game_name = $_POST['gamename'];
     $genre_id = intval($_POST['genre']);
-    $rating = floatval(trim($_POST['rating']));
+    $rating = intval($_POST['rating']);
 
     $username = $_COOKIE['user'];
 

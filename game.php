@@ -32,11 +32,33 @@
                 <option value="9">Головоломки</option>
             </select>
             <h3>Оценка</h3>
-            <input type="text" name="rating">
+            <div class="form-stars">
+                <label>
+                    <input type="radio" name="rating" value="1" onclick="updateStars(0)">
+                    <img class="form-stars__icon" src="icons/star.svg" alt="">
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2" onclick="updateStars(1)">
+                    <img class="form-stars__icon" src="icons/star.svg" alt="">
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3" onclick="updateStars(2)">
+                    <img class="form-stars__icon" src="icons/star.svg" alt="">
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4" onclick="updateStars(3)">
+                    <img class="form-stars__icon" src="icons/star.svg" alt="">
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5" onclick="updateStars(4)">
+                    <img class="form-stars__icon" src="icons/star.svg" alt="">
+                </label>
+            </div>
             <input type="submit" value="Подтвердить">
         </form>
     </main>
 
+    <script src="js/form.js"></script>
     <script src="js/redirect.js"></script>
 </body>
 </html>
