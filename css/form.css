@@ -73,7 +73,6 @@ input[type="submit"]:hover {
 }
 
 select {
-    width: 200px;
     height: 25px;
 }
 

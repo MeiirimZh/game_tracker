@@ -1,8 +1,41 @@
+Создание таблицы жанров
+CREATE TABLE genres (
+    genre_id INT AUTO_INCREMENT PRIMARY KEY,
+    genre_name TEXT NOT NULL
+)
+
+Создание таблицы пользователей
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username TEXT NOT NULL,
+    email TEXT NOT NULL,
+    password TEXT NOT NULL
+)
+
 Создание таблицы игр
-CREATE TABLE game (
+CREATE TABLE games (
 	game_id INT AUTO_INCREMENT PRIMARY KEY,
-    name TEXT NOT NULL,
-    genre TEXT NOT NULL,
+    game_name TEXT NOT NULL,
+    genre_id INT REFERENCES genres(genre_id),
     rating DECIMAL NOT NULL,
     user_id INT REFERENCES users(user_id)
 )
+
+Создание таблицы библиотеки игр
+CREATE TABLE user_games (
+    user_id INT REFERENCES users(user_id),
+    game_id INT REFERENCES games(game_id)
+)
+
+Вставка жанров
+INSERT INTO genres (genre_name)
+VALUES
+('Экшен'),
+('Платформер'),
+('Аркада'),
+('Rogue-like'),
+('RPG'),
+('Стратегия'),
+('Драки'),
+('Ужасы'),
+('Головоломки')

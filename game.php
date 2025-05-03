@@ -15,21 +15,21 @@
     ?>
 
     <main>
-        <form action="">
+        <form action="php/add_game.php" method="POST">
             <h2 class="form-title">Добавить игру</h2>
             <h3>Название игры</h3>
-            <input type="text" name="">
+            <input type="text" name="gamename">
             <h3>Жанр</h3>
             <select name="genre">
-                <option value="">Экшен</option>
-                <option value="">Платформер</option>
-                <option value="">Аркада</option>
-                <option value="">Rogue-like</option>
-                <option value="">RPG</option>
-                <option value="">Стратегия</option>
-                <option value="">Драки</option>
-                <option value="">Ужасы</option>
-                <option value="">Головоломки</option>
+                <option value="1">Экшен</option>
+                <option value="2">Платформер</option>
+                <option value="3">Аркада</option>
+                <option value="4">Rogue-like</option>
+                <option value="5">RPG</option>
+                <option value="6">Стратегия</option>
+                <option value="7">Драки</option>
+                <option value="8">Ужасы</option>
+                <option value="9">Головоломки</option>
             </select>
             <h3>Оценка</h3>
             <input type="text" name="rating">
@@ -38,6 +38,5 @@
     </main>
 
     <script src="js/redirect.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

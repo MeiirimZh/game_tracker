@@ -17,7 +17,26 @@
         <h2 class="main__username"></h2>
         <div class="games">
             <?php
-                for ($i = 0; $i < 9; $i++) {
+                $conn = new mysqli('localhost', 'root', '', 'game_tracker');
+
+                if ($conn->connect_error) {
+                    die(''. $conn->connect_error);
+                }
+
+                $username = $_COOKIE['user'];
+                $stmt = $conn->prepare('SELECT user_id FROM users WHERE username = ?');
+                $stmt->bind_param('s', $username);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $user_id = intval($result->fetch_assoc()['user_id']);
+
+                $stmt = $conn->prepare('SELECT COUNT(*) AS games_count FROM games WHERE user_id = ?');
+                $stmt->bind_param('i', $user_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $games_count = intval($result->fetch_assoc()['games_count']);
+    
+                for ($i = 0; $i < $games_count; $i++) {
                     require "blocks/card.html";
                 }
             ?>
@@ -26,5 +45,6 @@
 
     <script src="js/redirect.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/loadGames.js"></script>
 </body>
 </html>

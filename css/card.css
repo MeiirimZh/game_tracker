@@ -19,12 +19,36 @@
     border-radius: 10px;
 }
 
+.card-icon {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-icon__marker {
     position: absolute;
     width: 50px;
     height: 15px;
     left: 250px;
     top: 25px;
-    background: green;
     border-radius: 5px 0 0 5px;
+}
+
+.card-name, .card-genre {
+    color: #fff;
+    margin: 0;
+}
+
+.card-name {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.card-genre {
+    font-size: 16px;
+    text-align: center;
 }

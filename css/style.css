@@ -23,7 +23,10 @@ h1 {
 
 main {
     width: 100%;
+
+    margin-bottom: 50px;
 }
+
 
 .main__username {
     font-family: 'RussoOne';
